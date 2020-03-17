@@ -20,6 +20,11 @@ public class CommandLine implements CommandLineRunner {
         log.info("リクエスト！！");
         String requestUrl = "http://localhost:8080/sleep/";
         
+        String cc = service.exchangeHttpClient(requestUrl);
+        log.info(cc);
+
+        log.info("******* ここから WebClient ******");
+
         String aa = service.exchangeWebClient(requestUrl);
         log.info(aa);
 
